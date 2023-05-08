@@ -40,7 +40,7 @@
   Display a point element (concatenation of the x and y values, in hexadecimal)
 }
 
-@defproc[(string-to-point [point-hex string?] #:curve [curve secp256k1 curve?]) point?]{
+@defproc[(string-to-point [point-hex string?] [#:curve curve? secp256k1]) point?]{
   Return a point from a hexadecimal string and a curve
 }
 
