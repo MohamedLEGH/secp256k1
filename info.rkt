@@ -1,6 +1,6 @@
 #lang info
 (define collection "secp256k1")
-(define deps '("base"))
+(define deps '("base" "math-lib"))
 (define build-deps '("scribble-lib" "racket-doc" "rackunit-lib"))
 (define scribblings '(("scribblings/secp256k1.scrbl" ())))
 (define pkg-desc "Utilities for the secp256k1 curve, as used in Bitcoin")
