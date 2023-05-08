@@ -17,6 +17,10 @@
   Display a field element (only the value, not the field number)
 }
 
+@defproc[(string-to-field [value-hex string?] [field integer?]) field-element?]{
+  Return a field-element from a hexadecimal string and a field number
+}
+
 @defproc[(in-field? [value integer?] [field integer?]) boolean?]{
   Return true if  0 <= @racketfont{value} < @racketfont{field} 
 }

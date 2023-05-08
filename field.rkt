@@ -10,6 +10,12 @@
       #:min-width 64
       #:pad-string "0"))
 
+(define (string-to-field value-hex field)
+  ; value-hex is a hexadecimal string
+  ; field is an int
+  ; TODO : check that the value is in field
+  (field-element (string->number value-hex 16) field))
+
 (define (in-field? value field)
   (and (<= 0 value) (< value field)))
 
@@ -54,6 +60,7 @@
 (provide (struct-out field-element)
          in-field?
          field-to-string
+         string-to-field
          add-element
          sub-element
          rmul-element

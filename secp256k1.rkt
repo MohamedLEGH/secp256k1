@@ -29,6 +29,12 @@
   (string-append (field-to-string (point-x point-val))
                  (field-to-string (point-y point-val))))
 
+(define (string-to-point point-hex #:curve [curve secp256k1])
+  ; TODO : check that the point is on the curve
+  (define x (substring point-hex 0 64))
+  (define y (substring point-hex 64))
+  (point (string-to-field x P) (string-to-field y P) curve))
+
 (define (on-curve? point-val)
   (define x (point-x point-val))
   (define y (point-y point-val))
@@ -127,6 +133,7 @@
          (struct-out point)
          on-curve?
          point-to-string
+         string-to-point
          add-point
          rmul-point
          G

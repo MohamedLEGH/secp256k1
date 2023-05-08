@@ -40,6 +40,10 @@
   Display a point element (concatenation of the x and y values, in hexadecimal)
 }
 
+@defproc[(string-to-point [point-hex string?] #:curve [curve secp256k1 curve?]) point?]{
+  Return a point from a hexadecimal string and a curve
+}
+
 @defproc[(on-curve? [point-val point?]) boolean?]{
   Return true if y^2 = x^3 + ax + b
 }
