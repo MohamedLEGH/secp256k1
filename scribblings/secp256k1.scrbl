@@ -66,6 +66,6 @@
   Return point1 + point2, according to the addition rules for the elliptic curve secp256k1.
 }
 
-@defproc[(add-point [value point?] [scalar integer?]) point?]{
+@defproc[(rmul-point [value point?] [scalar integer?]) point?]{
   Return value * scalar. Implemented as cumulative addition of the point with itself.
 }
