@@ -1,6 +1,6 @@
 #lang racket/base
-(require  racket/format
-          math/number-theory)
+(require math/number-theory
+         racket/format)
 
 (struct field-element (value field) #:prefab)
 
