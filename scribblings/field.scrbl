@@ -17,6 +17,30 @@
   Display a field element (only the value, not the field number)
 }
 
-@defproc[(field-to-string [value integer? [field integer?]]) boolean?]{
+@defproc[(in-field? [value integer?] [field integer?]) boolean?]{
   Return true if  0 <= @racketfont{value} < @racketfont{field} 
+}
+
+@defproc[(add-element [fe1 field-element?] [fe2 field-element?]) field-element?]{
+  Return fe1 + fe2
+}
+
+@defproc[(sub-element [fe1 field-element?] [fe2 field-element?]) field-element?]{
+  Return fe1 - fe2
+}
+
+@defproc[(rmul-element [fe1 field-element?] [scalar integer?]) field-element?]{
+  Return fe1 * scalar
+}
+
+@defproc[(mul-element [fe1 field-element?] [fe2 field-element?]) field-element?]{
+  Return fe1 * fe2
+}
+
+@defproc[(pow-element [fe1 field-element?] [exponent integer?]) field-element?]{
+  Return fe1 ^ scalar
+}
+
+@defproc[(truediv-element [fe1 field-element?] [fe2 field-element?]) field-element?]{
+  Return fe1 / fe2
 }

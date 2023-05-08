@@ -1,8 +1,6 @@
 secp256k1
 =========
-Utilities for the secp256k1 curve, as used in Bitcoin
-
-A package to encode and decode bech32 encoding, according to the bitcoin documentation https://en.bitcoin.it/wiki/Bech32.
+Utilities for the secp256k1 curve, as used in Bitcoin. Inspired by https://onyb.gitbook.io/secp256k1-python/.
 
 # Installation
 ```bash
